@@ -12,7 +12,10 @@ const PostList = () => {
       <Card.Header as="h5">Recent Posts</Card.Header>
       <ListGroup variant="flush">
         {posts.map((post) => (
-          <ListGroup.Item key={post.id}>{post.content}</ListGroup.Item>
+          <ListGroup.Item key={post.id}>
+            <p>{post.content}</p>
+            <small>Posted by {post.user}</small>
+          </ListGroup.Item>
         ))}
       </ListGroup>
     </Card>
